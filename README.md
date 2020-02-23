@@ -16,16 +16,16 @@ The more I've been using react native, the more I've come to appreciate
 ### Setup (one time)
 
 ```
-$ cd react-native && yarn install
-$ cd react-native/ios && pod install
+$ ( cd react-native && yarn install )
+$ ( cd react-native/ios && pod install )
 ```
 
 ### Running:
 
 ```
 $ npx shadow-cljs@2.8.83 watch dev
-$ cd react-native && yarn start --reset-cache
-$ cd react-native && yarn ios
+$ ( cd react-native && yarn start --reset-cache )
+$ ( cd react-native && yarn ios )
 ```
 
 **Note**: you're going to want to disable "fast refresh" in the simulator.
