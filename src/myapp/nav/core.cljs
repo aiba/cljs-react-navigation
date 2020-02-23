@@ -4,6 +4,7 @@
             [applied-science.js-interop :as j]
             [hx.react :as hx]
             [myapp.nav.sub1 :as sub1]
+            ;;[myapp.nav.sub2 :as sub2]
             [myapp.util :refer [log jpps]]))
 
 (defonce *nav-state (atom nil))
