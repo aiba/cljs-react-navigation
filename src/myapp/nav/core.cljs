@@ -2,13 +2,9 @@
   (:require ["@react-navigation/native" :refer [NavigationContainer]]
             ["react-native" :as rn]
             [applied-science.js-interop :as j]
-            [hx.react :as hx]))
-
-(defn log [& args]
-  (j/apply js/console :log (to-array args)))
-
-(defn jpps [x]
-  (j/call js/JSON :stringify x nil 2))
+            [hx.react :as hx]
+            [myapp.nav.sub1 :as sub1]
+            [myapp.util :refer [log jpps]]))
 
 (defonce *nav-state (atom nil))
 
@@ -18,6 +14,4 @@
                         :onStateChange (fn [x]
                                          (log "new-state:\n" (jpps x))
                                          (reset! *nav-state x))}
-   [rn/View {:style {:flex 1, :alignItems "center", :justifyContent "center"}}
-    [rn/Text {:style {:font-size 36}}
-     "Hello World!"]]])
+   [sub1/Root]])

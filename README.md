@@ -13,7 +13,14 @@ Based on https://github.com/thheller/reagent-react-native/
 The more I've been using react native, the more I've come to appreciate
 [lilactown/hx](https://github.com/Lokeh/hx) as a thin wrapper over react. [More info here](https://github.com/Lokeh/hx/blob/master/docs/why-not-reagent.md).
 
-### Running
+### Setup (one time)
+
+```
+$ cd react-native && yarn install
+$ cd react-native/ios && pod install
+```
+
+### Running:
 
 ```
 $ npx shadow-cljs@2.8.83 watch dev
