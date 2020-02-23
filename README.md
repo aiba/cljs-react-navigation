@@ -26,7 +26,7 @@ $ cd react-native && yarn ios
 ### How the `react-native` folder was created
 
 ```
-$ npx react-native init MyApp
+$ npx react-native@0.61.5 init MyApp
 $ mv MyApp react-native
 $ cd react-native
 $ yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs
