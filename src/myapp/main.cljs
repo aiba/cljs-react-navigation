@@ -1,12 +1,8 @@
 (ns myapp.main
   (:require ["react-native" :as rn]
             [applied-science.js-interop :as j]
-            [hx.react :as hx]))
-
-(hx/defnc Root [_]
-  [rn/View {:style {:flex 1, :alignItems "center", :justifyContent "center"}}
-   [rn/Text {:style {:font-size 36}}
-    "Hello World"]])
+            [hx.react :as hx]
+            [myapp.nav.core :as nav]))
 
 (defonce *root-wrapper (atom nil))
 
@@ -18,7 +14,7 @@
   (componentWillUnmount [this]
     (reset! *root-wrapper nil))
   (render [this]
-    [Root]))
+    [nav/NavRoot]))
 
 (defn start {:dev/after-load true} []
   (if-let [rw @*root-wrapper]
